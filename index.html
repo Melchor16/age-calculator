@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <main>
+    <h1 class="hidden">Age calculator</h1>
+    <div class="square">
+      <!-- MAIN FORM -->
+      <form name="date-form" action="/" class="date-form" id="date-form">
+        <label for="day" class="day-label">Day</label>
+        <label for="month" class="month">Month</label>
+        <label for="year" class="year">Year</label>
+        <input name="day" type="text" class="day" id="day" placeholder="DD">
+        <input name="month" type="text" class="month" id="month" placeholder="MM">
+        <input name="year" type="text" class="year" id="year" placeholder="YYYY">
+        <!-- Error messages -->
+        <p class="required vis-hidden" id="required-day">This field is required</p>
+        <p class="required vis-hidden" id="required-month">This field is required</p>
+        <p class="required vis-hidden" id="required-year">This field is required</p>
+
+        <p class="incorrect hidden">Must be a Valid day</p>
+        <p class="incorrect hidden">Must be a Valid month</p>
+        <p class="incorrect hidden">Must be in the past</p>
+      </form>
+      <!-- DIVISION -->
+      <div class="line-button">
+        <hr>
+        <input type="submit" form="date-form" class="arrow-button" value="↧">
+        <hr>
+      </div>
+      <!-- RESULT -->
+      <div class="result">
+        <div class="result-year">
+          <p class="result-number" id="number-year">- -</p>
+          <p>Years</p>
+        </div>
+        <div class="result-month">
+          <p class="result-number" id="number-month">- -</p>
+          <p>Months</p>
+        </div>
+        <div class="result-day">
+          <p class="result-number" id="number-day">- -</p>
+          <p>Days</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution hidden">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+</body>
+<script src="./index.js"></script>
+</html>

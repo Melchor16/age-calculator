@@ -1,0 +1,178 @@
+:root{
+    /* Primary colors */
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    /* Neutral colors */
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+body, html{
+    height: 99%;
+    font-family: Poppins;
+    background-color: var(--Off-white);
+}
+
+main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN SQUARE */
+
+.square{
+    background-color: var(--White);
+    width: 34rem;
+    height: 30rem;
+    border-radius: 1rem;
+    border-end-end-radius: 10rem;
+    box-shadow: 10px 10px 27px 2px rgba(0,0,0,0.04);
+}
+
+/* DATE FORM */
+
+.date-form{
+    padding: 2rem 0 .5rem 2rem;
+    display: grid;
+    grid-template-columns: 22% 22% 22%;
+    justify-content: start;
+}
+
+.date-form label{
+    padding: 0 0 .5rem .3rem;
+    color: var(--Smokey-grey);
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.date-form input{
+    border-style: solid;
+    border-color: var(--Light-grey);
+    border-radius: .5rem;
+    width: 6rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-indent: .5rem;
+}
+
+.date-form input:hover{
+    cursor: pointer;
+}
+
+.date-form input:focus{
+    outline: none;
+    border-color: var(--Purple);
+}
+
+/* Error messages */
+
+.required, .incorrect{
+    font-size: .65rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--Light-red);
+}
+
+/* BUTTON AND LINE */
+
+.line-button{
+    padding-left: 2rem;
+    width: 100%;
+    display: block;
+}
+
+.line-button hr{
+    display: inline-block;
+    width: 70%;
+    height: 2px;
+    background-color: var(--Light-grey);
+    border: none;
+}
+
+.arrow-button{
+    display: inline;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    border: none;
+    background-color: var(--Purple);
+    color: white;
+    font-size: 2rem;
+}
+
+.arrow-button:hover{
+    background-color: var(--Off-black);
+    cursor: pointer;
+}
+
+/* RESULT */
+
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 2rem;
+    margin: 0;
+}
+
+.result div{
+    display: flex;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: lowercase;
+    height: 4rem;
+    line-height: 1px;
+    margin: 0;
+}
+
+.result-number{
+    color: var(--Purple);
+}
+
+/* HIDDEN */
+.hidden{
+    display: none;
+}
+
+.vis-hidden{
+    visibility: hidden;
+}
+
+.line-button hr:nth-of-type(2){ display: none;}
+
+/* MOBILE */
+
+@media (max-width: 550px){
+    
+    html{
+        font-size: 13px;
+    }
+
+    .square{
+        height: 35rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date-form{
+        padding: 3rem 0 1rem 0;
+        grid-template-columns: 40% 40% 40%;
+        justify-content: center;
+    }
+
+    .line-button hr:nth-of-type(2){ display: inline-block;}
+
+    .line-button hr{
+        width: 40%;
+    }
+}
