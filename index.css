@@ -138,6 +138,12 @@ main{
     color: var(--Purple);
 }
 
+.result-year,
+.result-month,
+.result-day{
+    gap: 1.2rem;
+}
+
 /* HIDDEN */
 .hidden{
     display: none;
